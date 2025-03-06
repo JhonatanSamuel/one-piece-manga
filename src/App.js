@@ -9,7 +9,7 @@ function App() {
     const [capituloAtual, setCapituloAtual] = useState(0);
     const [mostrarLeitor, setMostrarLeitor] = useState(false); // Estado para controlar qual tela mostrar
 
-    const apiUrl = "http://localhost:3001/api/mangas";
+    const apiUrl = "https://manga-api-vert.vercel.app/";
 
     useEffect(() => {
         fetch(apiUrl)

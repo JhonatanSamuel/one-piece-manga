@@ -9,8 +9,10 @@ function App() {
     const [capituloAtual, setCapituloAtual] = useState(0);
     const [mostrarLeitor, setMostrarLeitor] = useState(false); // Estado para controlar qual tela mostrar
 
+    const apiUrl = "https://manga-api-vert.vercel.app/"
+
     useEffect(() => {
-        fetch('http://localhost:3000/api/mangas')
+        fetch(apiUrl)
             .then(response => response.json())
             .then(data => setMangas(data))
             .catch(err => console.error('Erro ao buscar mangás:', err));

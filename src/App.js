@@ -1,25 +1,64 @@
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
 import './App.css';
+import Capitulo from './components/Capitulo';
+import Navegacao from './components/Navegacao';
+import ListaCapitulos from './components/ListaCapitulos';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [mangas, setMangas] = useState([]);
+    const [capituloAtual, setCapituloAtual] = useState(0);
+    const [mostrarLeitor, setMostrarLeitor] = useState(false); // Estado para controlar qual tela mostrar
+
+    useEffect(() => {
+        fetch('http://localhost:3000/api/mangas')
+            .then(response => response.json())
+            .then(data => setMangas(data))
+            .catch(err => console.error('Erro ao buscar mangás:', err));
+    }, []);
+
+    if (mangas.length === 0) {
+        return <div className="app-container">Carregando capítulos...</div>;
+    }
+
+    const selecionarCapitulo = (index) => {
+        setCapituloAtual(index);
+        setMostrarLeitor(true); // Mostra o leitor quando o capítulo for selecionado
+    };
+
+    const proximoCapitulo = () => {
+        if (capituloAtual < mangas.length - 1) {
+            setCapituloAtual(capituloAtual + 1);
+        }
+    };
+
+    const capituloAnterior = () => {
+        if (capituloAtual > 0) {
+            setCapituloAtual(capituloAtual - 1);
+        }
+    };
+
+    return (
+        <div className="app-container">
+            <h1>Leitor de Mangás</h1>
+
+            {mostrarLeitor ? (
+                <>
+                    <Capitulo manga={mangas[capituloAtual]} />
+                    <Navegacao
+                        capituloAtual={capituloAtual}
+                        totalCapitulos={mangas.length}
+                        proximoCapitulo={proximoCapitulo}
+                        capituloAnterior={capituloAnterior}
+                    />
+                    <button onClick={() => setMostrarLeitor(false)}>
+                        Voltar para lista de capítulos
+                    </button>
+                </>
+            ) : (
+                <ListaCapitulos mangas={mangas} selecionarCapitulo={selecionarCapitulo} />
+            )}
+        </div>
+    );
 }
 
 export default App;

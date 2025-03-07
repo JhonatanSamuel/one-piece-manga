@@ -9,7 +9,7 @@ function App() {
     const [capituloAtual, setCapituloAtual] = useState(0);
     const [mostrarLeitor, setMostrarLeitor] = useState(false); // Estado para controlar qual tela mostrar
 
-    const apiUrl = "https://manga-api-xe5r.onrender.com/api/mangas";
+    const apiUrl = "https://manga-api-production-6596.up.railway.app/api/mangas";
 
     useEffect(() => {
         fetch(apiUrl)

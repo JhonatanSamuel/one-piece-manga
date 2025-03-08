@@ -33,6 +33,8 @@ img {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer; /* Indicativo de que a imagem é clicável */
   transition: transform 0.3s ease; /* Suaviza a animação do zoom */
+  pointer-events: none; /* Impede interações */
+  -webkit-user-drag: none; /* Impede arrastar no Safari */
 }
 
 /* Quando o mouse estiver sobre a imagem, o cursor muda para o ícone "+" */
@@ -69,8 +71,7 @@ button {
   margin: 0 auto;
   width: 100%; /* Faz a área ocupar toda a largura da tela */
   box-sizing: border-box; /* Ajusta o tamanho da área considerando o padding */
-  pointer-events: none; /* Impede interações */
-  -webkit-user-drag: none; /* Impede arrastar no Safari */
+
 }
 
 button:hover {

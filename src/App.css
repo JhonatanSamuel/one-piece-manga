@@ -71,7 +71,7 @@ button {
   flex-direction: column; /* Colocando as imagens uma embaixo da outra */
   justify-content: flex-start; /* Começa o conteúdo do topo */
   align-items: center; /* Centraliza as imagens horizontalmente */
-  overflow-y: scroll;  /*Rolagem ao longo do eixo Y */
+  overflow-x: hidden;  /*Rolagem ao longo do eixo Y */
   max-height: 80vh; /* Limita a altura da área de exibição das imagens */
   padding: 10px 0;
   margin: 0 auto;

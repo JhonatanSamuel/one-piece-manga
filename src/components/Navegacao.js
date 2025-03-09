@@ -3,10 +3,10 @@ import React from 'react';
 function Navegacao({ capituloAtual, totalCapitulos, proximoCapitulo, capituloAnterior }) {
     return (
         <div className="navegacao">
-            <button onClick={capituloAnterior} disabled={capituloAtual === 0}>
+            <button onClick={capituloAnterior} disabled={capituloAtual === totalCapitulos - 1}>
                 Capítulo Anterior
             </button>
-            <button onClick={proximoCapitulo} disabled={capituloAtual === totalCapitulos - 1}>
+            <button onClick={proximoCapitulo} disabled={capituloAtual === 0}>
                 Próximo Capítulo
             </button>
         </div>
@@ -14,3 +14,4 @@ function Navegacao({ capituloAtual, totalCapitulos, proximoCapitulo, capituloAnt
 }
 
 export default Navegacao;
+

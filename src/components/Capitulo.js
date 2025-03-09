@@ -20,7 +20,7 @@ function Capitulo({ manga }) {
                     onClick={() => handleImageClick(index)} // Evento de clique para aplicar o zoom
                 />
             ))}
-            <div className="espaco-final"></div>
+            
         </div>
     );
 }

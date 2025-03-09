@@ -18,6 +18,7 @@ function ListaCapitulos({ mangas, selecionarCapitulo }) {
                     </li>
                 ))}
             </ul>
+            <div className="espaco-final"></div>
         </div>
     );
 }

@@ -47,7 +47,7 @@ function App() {
                 <>
                     <Capitulo manga={mangas[capituloAtual]} />
                     
-                    <button onClick={() => setMostrarLeitor(false)}>
+                    <button className='voltarParaLista' onClick={() => setMostrarLeitor(false)}>
                         Voltar para lista de capítulos
                     </button>
 

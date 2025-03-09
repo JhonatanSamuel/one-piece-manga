@@ -46,15 +46,17 @@ function App() {
             {mostrarLeitor ? (
                 <>
                     <Capitulo manga={mangas[capituloAtual]} />
+                    
+                    <button onClick={() => setMostrarLeitor(false)}>
+                        Voltar para lista de capítulos
+                    </button>
+
                     <Navegacao
                         capituloAtual={capituloAtual}
                         totalCapitulos={mangas.length}
                         proximoCapitulo={proximoCapitulo}
                         capituloAnterior={capituloAnterior}
                     />
-                    <button onClick={() => setMostrarLeitor(false)}>
-                        Voltar para lista de capítulos
-                    </button>
                 </>
             ) : (
                 <ListaCapitulos mangas={mangas} selecionarCapitulo={selecionarCapitulo} />

@@ -4,6 +4,8 @@ import Capitulo from './components/Capitulo';
 import Navegacao from './components/Navegacao';
 import ListaCapitulos from './components/ListaCapitulos';
 
+
+
 function App() {
     const [mangas, setMangas] = useState([]);
     const [capituloAtual, setCapituloAtual] = useState(0);
@@ -46,6 +48,8 @@ function App() {
             {mostrarLeitor ? (
                 <>
                     <Capitulo manga={mangas[capituloAtual]} />
+                    <img src='./img/luffy-logo.jpg' />
+                    <img src='./img/onepiece-logo.jpg' />
                     
                     <button className='voltarParaLista' onClick={() => setMostrarLeitor(false)}>
                         Voltar para lista de capítulos

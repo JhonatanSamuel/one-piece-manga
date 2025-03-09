@@ -139,7 +139,7 @@ li button:active {
 }
 
 .capa {
-  position: fixed;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
@@ -156,6 +156,10 @@ li button:active {
   width: 30px;
   height: 30px;
   margin: 20px 0;
+  height: 130px;
+  margin: 20px 0;
+  width: 100px;
+  margin-left: 18rem;
 }
 
 
@@ -171,9 +175,10 @@ li button:active {
 
   button {
     font-size: 1.2rem;
-    padding: 15px 30px;
+    padding: 10px 30px;
     width: 100%;  /* Tornar os botões mais largos no celular */
-    margin: 15px 0;
+    margin: 2px 0;
+    font-size: 15px;
   }
 
   .capitulo-imagens {
@@ -189,20 +194,40 @@ li button:active {
   }
 
   img {
-    max-height: 60vh; /* No celular, as imagens ficam um pouco menores */
-}
-
-  ul {
-      padding: 0 10px;
+    max-height: 84vh; /* No celular, as imagens ficam um pouco menores */
   }
+
 
   li button {
       font-size: 1rem;
       width: 100%;
   }
 
+  .voltarParaLista {
+    margin-bottom: 50rem;
+    position: fixed;
+    width: 16rem;
+  }
+
+  .navegacao {
+    display: flex;
+    gap: 122px;
+    justify-content: center;
+    margin-top: 42rem;
+    position: fixed;
+    width: 30rem;
+    height: 4rem;
+    font-size: 20px;
+  }
+
   .capa {
     z-index: -100;
     opacity: 0.3;
+    max-height: none;
+  }
+
+  .logo {
+    width: 80px;
+    margin-left: 13rem;
   }
 }

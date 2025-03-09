@@ -123,7 +123,7 @@ li button:active {
 
 .navegacao {
   position: fixed;
-  margin-top: 50rem;
+  margin-top: 44rem;
   display: flex;
   gap: 15px;
   justify-content: center;
@@ -217,7 +217,7 @@ li button:active {
     margin-top: 43rem;
     position: fixed;
     width: 15rem;
-    height: 55px;
+    height: 32px;
     font-size: 20px;
   }
 

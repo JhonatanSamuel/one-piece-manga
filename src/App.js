@@ -67,6 +67,7 @@ function App() {
             ) : (
                 <ListaCapitulos mangas={mangas} selecionarCapitulo={selecionarCapitulo} />
             )}
+            <div className="espaco-final"></div>
         </div>
     );
 }

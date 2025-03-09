@@ -2,7 +2,7 @@
 .app-container {
   text-align: center;
   padding: 20px;
-  background-color: #f0f0f0;
+  background-color: #fff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -54,7 +54,7 @@ button {
   padding: 12px 24px;
   font-size: 1.1rem;
   cursor: pointer;
-  background-color: #007bff;
+  background-color: #007bffa8;
   color: white;
   border: none;
   border-radius: 8px;
@@ -81,32 +81,6 @@ button {
 
 }
 
-.navegacao {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  gap: 15px; /* Espaço entre os botões */
-}
-
-.navegacao button {
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  transition: 0.3s;
-}
-
-.navegacao button:disabled {
-  background-color: gray;
-  cursor: not-allowed;
-}
-
-.navegacao button:hover {
-  background-color: #0056b3;
-}
 
 button:hover {
   background-color: #0056b3;
@@ -118,7 +92,7 @@ button:disabled {
   cursor: not-allowed;
 }
 
-/* Lista de capítulos */
+
 /* Lista de capítulos */
 ul {
   list-style: none;
@@ -146,6 +120,18 @@ li button:hover {
 li button:active {
   background-color: #b91a1a8f;
   transform: scale(0.95);
+}
+
+.navegacao {
+  position: fixed;
+  margin-top: 50rem;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.voltarParaLista {
+  
 }
 
 

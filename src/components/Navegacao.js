@@ -1,19 +1,31 @@
 import React from 'react';
 
 function Navegacao({ capituloAtual, totalCapitulos, proximoCapitulo, capituloAnterior }) {
+    
+    const handleProximo = () => {
+        if (capituloAtual < totalCapitulos - 1) {
+            proximoCapitulo();
+        } else {
+            alert("🚨 Último capítulo disponível!");
+        }
+    };
+
+    const handleAnterior = () => {
+        if (capituloAtual > 0) {
+            capituloAnterior();
+        } else {
+            alert("🚨 Primeiro capítulo!");
+        }
+    
+    
     return (
         <div className="navegacao">
-           if(<button  onClick={capituloAnterior} disabled={capituloAtual === totalCapitulos - 1} >
-                Capítulo Anterior  
-            </button>) {
-                <alert> Primeiro Capítulo </alert>
-            } if(<button onClick={proximoCapitulo} disabled={capituloAtual === 0}>
-                Próximo Capítulo  <alert> Último Capítulo </alert>
-            </button>) {
-                <alert> Último Capítulo </alert>
-            }
-            
-            
+            <button onClick={capituloAnterior} disabled={capituloAtual === totalCapitulos - 1}>
+                Capítulo Anterior 
+            </button>
+            <button onClick={proximoCapitulo} disabled={capituloAtual === 0}>
+                Próximo Capítulo
+            </button>
         </div>
     );
 }

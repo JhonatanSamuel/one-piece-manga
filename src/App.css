@@ -131,6 +131,10 @@ li button:active {
 }
 
 .voltarParaLista {
+  position: fixed;
+  margin-bottom: 20rem;
+  
+  
   
 }
 

@@ -48,7 +48,7 @@ function App() {
             {mostrarLeitor ? (
                 <>
                     <Capitulo manga={mangas[capituloAtual]} />
-                    
+
                     <img className='capa' src='./img/onepiece-logo.jpg' alt='img-capa' />
                     
                     <button className='voltarParaLista' onClick={() => setMostrarLeitor(false)}>
@@ -58,8 +58,9 @@ function App() {
                     <Navegacao
                         capituloAtual={capituloAtual}
                         totalCapitulos={mangas.length}
-                        proximoCapitulo={proximoCapitulo}
-                        capituloAnterior={capituloAnterior}
+                        
+                        capituloAnterior={proximoCapitulo}
+                        proximoCapitulo={capituloAnterior}
                     />
                 </>
             ) : (

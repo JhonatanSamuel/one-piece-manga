@@ -6,7 +6,7 @@ function ListaCapitulos({ mangas, selecionarCapitulo }) {
             <h2>Capitulo 1108 em diante ... </h2>
             <ul>
                 {mangas.map((manga, index) => (
-                    <li className='voltarParaLista' key={manga.id}>
+                    <li key={manga.id}>
                         <button  onClick={() => selecionarCapitulo(index)}>
                             {manga.titulo}
                         </button>

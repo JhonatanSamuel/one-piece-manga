@@ -8,9 +8,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-family: "Roboto", sans-serif;
 }
 
 h1 {
+  display: none;
   font-size: 2rem;
   color: #333;
   margin-bottom: 20px;
@@ -27,8 +29,8 @@ h2 {
 img {
   display: block; /* Faz as imagens se comportarem como blocos, um embaixo da outra */
   max-width: 100%; /* Deixa as imagens ocuparem toda a largura da tela */
-  max-height: 80vh; /* Limita a altura das imagens a 80% da altura da tela */
-  margin: 20px 0;
+  max-height: 115vh; /* Limita a altura das imagens a 80% da altura da tela */
+  margin: 5px 0;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer; /* Indicativo de que a imagem é clicável */
@@ -49,7 +51,6 @@ img.zoom {
 }
 
 button {
-  margin: 10px;
   padding: 12px 24px;
   font-size: 1.1rem;
   cursor: pointer;
@@ -60,18 +61,51 @@ button {
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+.capitulo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza tudo */
+}
+
 .capitulo-imagens {
   display: flex; /* Usando Flexbox para centralizar */
   flex-direction: column; /* Colocando as imagens uma embaixo da outra */
   justify-content: flex-start; /* Começa o conteúdo do topo */
   align-items: center; /* Centraliza as imagens horizontalmente */
-  overflow-y: scroll; /* Rolagem ao longo do eixo Y */
+  /*overflow-y: scroll;  Rolagem ao longo do eixo Y */
   max-height: 80vh; /* Limita a altura da área de exibição das imagens */
   padding: 10px 0;
   margin: 0 auto;
   width: 100%; /* Faz a área ocupar toda a largura da tela */
   box-sizing: border-box; /* Ajusta o tamanho da área considerando o padding */
 
+}
+
+.navegacao {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Espaço entre os botões */
+}
+
+.navegacao button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.navegacao button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+.navegacao button:hover {
+  background-color: #0056b3;
 }
 
 button:hover {
@@ -97,7 +131,7 @@ li {
 
 li button {
   padding: 15px 30px;
-  background-color: #28a745;
+  background-color: #ab1e1ebd;
   border-radius: 10px;
   font-size: 1.2rem;
   width: 100%;
@@ -105,12 +139,12 @@ li button {
 }
 
 li button:hover {
-  background-color: #218838;
+  background-color: #884f21;
   transform: scale(1.05);
 }
 
 li button:active {
-  background-color: #1e7e34;
+  background-color: #b91a1a8f;
   transform: scale(0.95);
 }
 

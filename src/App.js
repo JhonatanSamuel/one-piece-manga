@@ -41,7 +41,7 @@ function App() {
 
     return (
         <div className="app-container">
-            <h1>Leitor de Mangás</h1>
+            <h1>One Piece</h1>
 
             {mostrarLeitor ? (
                 <>

@@ -20,10 +20,10 @@ function Navegacao({ capituloAtual, totalCapitulos, proximoCapitulo, capituloAnt
     
     return (
         <div className="navegacao">
-            <button onClick={handleAnterior} disabled={capituloAtual === totalCapitulos - 1}>
+            <button onClick={handleProximo} disabled={capituloAtual === totalCapitulos - 1}>
                 Capítulo Anterior 
             </button>
-            <button onClick={handleProximo } disabled={capituloAtual === 0}>
+            <button onClick={handleAnterior } disabled={capituloAtual === 0}>
                 Próximo Capítulo
             </button>
         </div>

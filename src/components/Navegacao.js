@@ -2,7 +2,7 @@ import React from 'react';
 
 function Navegacao({ capituloAtual, totalCapitulos, proximoCapitulo, capituloAnterior }) {
     return (
-        <div>
+        <div className="navegacao">
             <button onClick={capituloAnterior} disabled={capituloAtual === 0}>
                 Capítulo Anterior
             </button>

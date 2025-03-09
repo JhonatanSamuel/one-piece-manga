@@ -59,7 +59,8 @@ function App() {
                         capituloAtual={capituloAtual}
                         totalCapitulos={mangas.length}
                         
-                        capituloAnterior={proximoCapitulo}
+                        
+                        capituloAnterior={proximoCapitulo} 
                         proximoCapitulo={capituloAnterior}
                     />
                 </>

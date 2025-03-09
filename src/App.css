@@ -50,7 +50,7 @@ img.zoom {
   cursor: zoom-out; /* Mudança no cursor para indicar que é possível diminuir */
 }
 
-button {
+.voltarParaLista {
   padding: 12px 24px;
   font-size: 1.1rem;
   cursor: pointer;
@@ -59,6 +59,8 @@ button {
   border: none;
   border-radius: 8px;
   transition: background-color 0.3s ease, transform 0.3s ease;
+  position: fixed;
+  margin-bottom: 20rem;
 }
 
 .capitulo-container {
@@ -128,15 +130,17 @@ li button:active {
   display: flex;
   gap: 15px;
   justify-content: center;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  background-color: #007bffa8;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.voltarParaLista {
-  position: fixed;
-  margin-bottom: 20rem;
-  
-  
-  
-}
+
 
 
 /* Responsividade */

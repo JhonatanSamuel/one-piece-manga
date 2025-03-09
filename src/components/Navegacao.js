@@ -4,10 +4,10 @@ function Navegacao({ capituloAtual, totalCapitulos, proximoCapitulo, capituloAnt
     return (
         <div className="navegacao">
             <button onClick={capituloAnterior} disabled={capituloAtual === totalCapitulos - 1}>
-                Capítulo Anterior
+                Capítulo Anterior  <alert> Primeiro Capítulo </alert>
             </button>
             <button onClick={proximoCapitulo} disabled={capituloAtual === 0}>
-                Próximo Capítulo
+                Próximo Capítulo  <alert> Último Capítulo </alert>
             </button>
         </div>
     );

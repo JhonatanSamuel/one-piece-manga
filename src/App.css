@@ -104,7 +104,7 @@ li {
 
 li button {
   padding: 15px 30px;
-  background-color: #ab1e1ebd;
+  background-color: #d71818ad;
   border-radius: 10px;
   font-size: 1.2rem;
   width: 100%;
@@ -112,7 +112,7 @@ li button {
 }
 
 li button:hover {
-  background-color: #884f21;
+  background-color: #8f2f2fc7;
   transform: scale(1.05);
 }
 

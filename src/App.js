@@ -48,8 +48,8 @@ function App() {
             {mostrarLeitor ? (
                 <>
                     <Capitulo manga={mangas[capituloAtual]} />
-                    <img src='./img/luffy-logo.jpg' />
-                    <img src='./img/onepiece-logo.jpg' />
+                    
+                    <img className='capa' src='./img/onepiece-logo.jpg' alt='img-capa' />
                     
                     <button className='voltarParaLista' onClick={() => setMostrarLeitor(false)}>
                         Voltar para lista de capítulos

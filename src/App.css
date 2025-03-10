@@ -214,10 +214,10 @@ li button:active {
     display: flex;
     gap: 13px;
     justify-content: center;
-    margin-top: 43rem;
+    margin-top: 34rem;
     position: fixed;
     width: 15rem;
-    height: 32px;
+    height: 56px;
     font-size: 20px;
   }
 

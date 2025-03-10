@@ -132,7 +132,7 @@ li button:active {
 
 .voltarParaLista {
   position: fixed;
-  margin-bottom: 57rem;
+  margin-bottom: 51rem;
   
   
   
@@ -205,7 +205,7 @@ li button:active {
   }
 
   .voltarParaLista {
-    margin-bottom: 50rem;
+    margin-bottom: 45rem;
     position: fixed;
     width: 16rem;
   }

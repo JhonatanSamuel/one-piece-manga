@@ -21,8 +21,7 @@ function App() {
     }, []);
 
     useEffect(() => {
-        document.documentElement.scrollTop = 0;
-        document.body.scrollTop = 0;
+        window.scrollTo({ top: 0, behavior: 'instant' }); // Garante que a página inicie no topo SEM animação
     }, [capituloAtual]);
 
     if (mangas.length === 0) {
@@ -68,6 +67,9 @@ function App() {
                         capituloAnterior={proximoCapitulo} 
                         proximoCapitulo={capituloAnterior}
                     />
+
+
+                    
                 </>
             ) : (
                 <ListaCapitulos mangas={mangas} selecionarCapitulo={selecionarCapitulo} />

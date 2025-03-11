@@ -20,6 +20,10 @@ function App() {
             .catch(err => console.error('Erro ao buscar mangás:', err));
     }, []);
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [capituloAtual]);
+
     if (mangas.length === 0) {
         return <div className="app-container">Carregando capítulos...</div>;
     }

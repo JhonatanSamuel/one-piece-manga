@@ -80,10 +80,6 @@ button {
 
 }
 
-button:active {
-  background-color: #d71818ad;
-}
-
 
 button:hover {
   background-color: #0056b3;
@@ -134,12 +130,18 @@ li button:active {
   
 }
 
+.navegacao:active {
+  opacity: .6;
+}
+
+
 .voltarParaLista {
   position: fixed;
   margin-bottom: 51rem;
-  
-  
-  
+}
+
+.voltarParaLista:active {
+  opacity: .6;
 }
 
 .capa {

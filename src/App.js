@@ -21,9 +21,8 @@ function App() {
     }, []);
 
     useEffect(() => {
-        setTimeout(() => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }, 100);
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
     }, [capituloAtual]);
 
     if (mangas.length === 0) {

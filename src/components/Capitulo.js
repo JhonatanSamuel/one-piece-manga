@@ -1,13 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+
 
 function Capitulo({ manga }) {
     // Estado para armazenar a imagem que está em zoom
     const [zoomedImage, setZoomedImage] = useState(null);
 
+    useEffect(() => {
+        window.scrollTo(0, 0); // Rola a página para o topo sempre que um novo capítulo for renderizado
+    }, [manga]);
+    
+
     const handleImageClick = (index) => {
         // Se a imagem clicada já estiver em zoom, desfaz o zoom
         setZoomedImage(zoomedImage === index ? null : index);
     };
+
+    
 
     return (
         <div className="capitulo-imagens">

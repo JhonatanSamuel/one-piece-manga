@@ -86,8 +86,8 @@ function App() {
                     <Navegacao
                         capituloAtual={capituloAtual}
                         totalCapitulos={mangas.length}
-                        capituloAnterior={capituloAnterior} 
-                        proximoCapitulo={proximoCapitulo}
+                        capituloAnterior={proximoCapitulo} 
+                        proximoCapitulo={capituloAnterior }
                     />
                 </>
             ) : (

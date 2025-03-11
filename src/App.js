@@ -29,6 +29,10 @@ function App() {
                 if (capituloAtual > 0) {
                     setCapituloAtual(capituloAtual - 1);
                 }
+            } else if (e.key === 'ArrowUp') { // Seta para cima, vai para o topo da página
+                window.scrollBy(0, -window.innerHeight); // Mover a página para cima
+            } else if (e.key === 'ArrowDown') { // Seta para baixo, vai para o final da página
+                window.scrollBy(0, window.innerHeight); // Mover a página para baixo
             }
         };
 

@@ -9,10 +9,11 @@ function Navegacao({ capituloAtual, totalCapitulos, proximoCapitulo, capituloAnt
             <button onClick={proximoCapitulo} disabled={capituloAtual === 0}>
                 Próximo Capítulo
             </button>
-            <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-                Voltar ao topo
-            </button>
+            
+            
         </div>
+
+        
     );
 }
 

@@ -4,8 +4,6 @@ import Capitulo from './components/Capitulo';
 import Navegacao from './components/Navegacao';
 import ListaCapitulos from './components/ListaCapitulos';
 
-
-
 function App() {
     const [mangas, setMangas] = useState([]);
     const [capituloAtual, setCapituloAtual] = useState(0);
@@ -19,6 +17,28 @@ function App() {
             .then(data => setMangas(data))
             .catch(err => console.error('Erro ao buscar mangás:', err));
     }, []);
+
+    // UseEffect para escutar as setas do teclado
+    useEffect(() => {
+        const handleKeyDown = (e) => {
+            if (e.key === 'ArrowRight') { // Seta para a direita para o próximo capítulo
+                if (capituloAtual < mangas.length - 1) {
+                    setCapituloAtual(capituloAtual + 1);
+                }
+            } else if (e.key === 'ArrowLeft') { // Seta para a esquerda para o capítulo anterior
+                if (capituloAtual > 0) {
+                    setCapituloAtual(capituloAtual - 1);
+                }
+            }
+        };
+
+        window.addEventListener('keydown', handleKeyDown);
+
+        // Remove o event listener quando o componente for desmontado
+        return () => {
+            window.removeEventListener('keydown', handleKeyDown);
+        };
+    }, [capituloAtual, mangas.length]); // Re-executa sempre que capituloAtual mudar
 
     useEffect(() => {
         window.scrollTo({ top: 0, behavior: 'instant' }); // Garante que a página inicie no topo SEM animação
@@ -62,14 +82,9 @@ function App() {
                     <Navegacao
                         capituloAtual={capituloAtual}
                         totalCapitulos={mangas.length}
-                        
-                        
-                        capituloAnterior={proximoCapitulo} 
-                        proximoCapitulo={capituloAnterior}
+                        capituloAnterior={capituloAnterior} 
+                        proximoCapitulo={proximoCapitulo}
                     />
-
-
-                    
                 </>
             ) : (
                 <ListaCapitulos mangas={mangas} selecionarCapitulo={selecionarCapitulo} />

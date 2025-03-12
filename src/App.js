@@ -22,12 +22,12 @@ function App() {
     useEffect(() => {
         const handleKeyDown = (e) => {
             if (e.key === 'ArrowRight') { // Seta para a direita para o próximo capítulo
-                if (capituloAtual > mangas.length - 1) {
-                    setCapituloAtual(capituloAtual + 1);
+                if (capituloAtual < mangas.length + 1) {
+                    setCapituloAtual(capituloAtual - 1);
                 }
             } else if (e.key === 'ArrowLeft') { // Seta para a esquerda para o capítulo anterior
-                if (capituloAtual < 0) {
-                    setCapituloAtual(capituloAtual - 1);
+                if (capituloAtual > 0) {
+                    setCapituloAtual(capituloAtual + 1);
                 }
             } else if (e.key === 'ArrowUp') { // Seta para cima, vai para o topo da página
                 window.scrollBy(0, -window.innerHeight); // Mover a página para cima
